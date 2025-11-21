@@ -4,8 +4,14 @@ from matplotlib import pyplot as plt
 # Set style theme
 plt.style.use('seaborn-v0_8-deep')
 
+
 # Read CSV into DataFrame
 df = pd.read_csv('class-data-v1.csv')
-print(df.info())
+df = df.head(8) # Limit to first 8 rows for our class
+
 # NOTE: some cols need type converted (object -> boolean, datetime)
 
+
+
+
+print(df.info())
