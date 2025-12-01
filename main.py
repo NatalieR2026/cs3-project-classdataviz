@@ -27,7 +27,5 @@ plt.xlabel('Hair Length')
 plt.ylabel('Temperature Preference')
 plt.title('Hair Length vs. Temp Pref')
 plt.savefig('scattterplot_hairtemp.png')
+plt.close()
 
-
-
-# print(df.info())
