@@ -1,5 +1,7 @@
 import pandas as pd
 from matplotlib import pyplot as plt
+import seaborn as sns
+import numpy as np
 
 # Set style theme
 plt.style.use('seaborn-v0_8-deep')
@@ -29,3 +31,11 @@ plt.title('Hair Length vs. Temp Pref')
 plt.savefig('scattterplot_hairtemp.png')
 plt.close()
 
+df_big5 = df[['BigFive Neuroticism', 'BigFive Extraversion', 'BigFive Openness', 'BigFive Conscientious', 'BigFive Agreeableness']]
+print(df_big5)
+corr_matrix = df_big5.corr()
+sns.heatmap(corr_matrix, cmap='PuOr')
+plt.savefig('BigFiveHeatMap.png')
+plt.close()
+# change to a half map
+# fix labels
